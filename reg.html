@@ -3,19 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            background-color: bisque;
+            width: 75%;
+            max-width: 500px;
+            padding: 20px;
+            border: 5px solid black;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #333;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
 <body>
     <div class="container" id="container">
         <form action="#" id="form1">
-            <h1 id="heading">Regristration Form</h1>
-            <label for="">Name</label>
-            <input type="text" placeholder="Enter your Name">
-            <label for="">Password</label>
-            <input type="password" id="pass">
-            <label for="">Confirm password</label>
-            <input type="password" id="cpass">
-            <input type="submit">
+            <h1 id="heading">Registration Form</h1>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your Name">
+            <label for="pass">Password</label>
+            <input type="password" id="pass" placeholder="Enter your Password">
+            <label for="cpass">Confirm Password</label>
+            <input type="password" id="cpass" placeholder="Confirm Password" required>
+            <input type="submit" value="Register">
         </form>
     </div>
 </body>
